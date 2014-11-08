@@ -25,9 +25,9 @@ class UserDatatable < AjaxDatatablesRails::Base
   def data
     records.map do |record|
       [
-        (best_in_place  record, :name, :type => :input),
-        record.phone,
-        record.address
+        (best_in_place  record, :name, :as => :input),
+        (best_in_place  record, :phone, :as => :input),
+        (best_in_place  record, :address, :as => :input)
         # comma separated list of the values for each cell of a table row
         # example: record.attribute,
       ]
