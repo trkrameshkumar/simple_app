@@ -5,10 +5,13 @@ class UserDatatable < AjaxDatatablesRails::Base
   # include AjaxDatatablesRails::Extensions::WillPaginate
   # include AjaxDatatablesRails::Extensions::SimplePaginator
 
+  def_delegator :@view, :best_in_place
+
   def sortable_columns
     # list columns inside the Array in string dot notation.
     # Example: 'users.name'
     @sortable_columns ||= ['users.name' ,'users.phone']
+
   end
 
   def searchable_columns
@@ -22,7 +25,7 @@ class UserDatatable < AjaxDatatablesRails::Base
   def data
     records.map do |record|
       [
-        record.name,
+        (best_in_place  record, :name, :type => :input),
         record.phone,
         record.address
         # comma separated list of the values for each cell of a table row

@@ -39,6 +39,9 @@ GEM
     ajax-datatables-rails (0.2.0)
       railties (>= 3.1)
     arel (5.0.1.20140414130214)
+    best_in_place (3.0.0)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -123,6 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   ajax-datatables-rails
+  best_in_place
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-datatables-rails!
