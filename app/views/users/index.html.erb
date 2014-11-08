@@ -1,4 +1,4 @@
-<table id="users-table", data-source="<%= users_path(format: :json) %>">
+<table id="users-table", data-source="<%= users_path(format: :json) %>", class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -11,3 +11,4 @@
   </tbody>
 </table>
 
+ <%= best_in_place  User.fourth, :phone, :type => :input, :nil => "Click me to add content!" %>
