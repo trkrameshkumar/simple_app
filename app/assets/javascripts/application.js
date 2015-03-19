@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require dataTables/jquery.dataTables
 //= require_tree .
+
+$.fn.dataTable.ext.errMode = 'throw';
